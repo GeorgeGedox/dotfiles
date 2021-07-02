@@ -1,0 +1,11 @@
+ohmyzsh/ohmyzsh
+
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/pip
+ohmyzsh/ohmyzsh path:plugins/aliases
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-autosuggestions
+
+romkatv/powerlevel10k

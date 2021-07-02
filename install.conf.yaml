@@ -2,12 +2,10 @@
     link:
       relink: true
 
+- shell:
+    - [curl -sfL git.io/antibody | sh -s - -b /usr/local/bin, Install antibody]
+
 - clean: ['~']
 
 - link:
-    ~/antigen: antigen
     ~/.zshrc: .zshrc
-    ~/.p10k.zsh: .p10k.zsh
-
-- shell:
-  - [git submodule update --init --recursive, Installing submodules]
