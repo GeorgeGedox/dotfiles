@@ -3,9 +3,14 @@
       relink: true
 
 - shell:
-    - [curl -sfL git.io/antibody | sh -s - -b /usr/local/bin, Install antibody]
+    - [sudo chsh -s $(which zsh), Making zsh the default shell]
+    - [curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin, Install antibody]
+    - [sudo sh ./install_assh.sh, Install assh]
 
-- clean: ['~']
+- clean:
+  - "~"
+  - "~/.ssh"
 
 - link:
     ~/.zshrc: .zshrc
+    ~/.ssh/assh.yml: assh.yml
