@@ -8,5 +8,8 @@ antibody bundle < ~/.dotfiles/antibody_plugins
 # Load path setups
 source ~/.dotfiles/paths.zsh
 
+# Load functions
+source ~/.dotfiles/functions.zsh
+
 # Load aliases
 source ~/.dotfiles/aliases.zsh
