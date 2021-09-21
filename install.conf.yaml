@@ -13,4 +13,5 @@
 
 - link:
     ~/.zshrc: .zshrc
+    ~/.vimrc: .vimrc
     ~/.ssh/assh.yml: assh.yml
