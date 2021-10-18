@@ -1,3 +1,6 @@
+# Bootstrap
+DISABLE_MAGIC_FUNCTIONS=true #Fix slow paste
+
 # Load antibody
 source <(antibody init)
 antibody bundle < ~/.dotfiles/antibody_plugins
