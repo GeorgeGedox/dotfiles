@@ -8,6 +8,8 @@ chmod +x ~/.dotfiles/install
 cd ~/.dotfiles && ./install
 ```
 
+To share the zsh and vim configs with `root` just run `install_root` with `sudo`
+
 ## Components
 * [dotbot](https://github.com/anishathalye/dotbot) for easy boostrap of dotfiles
 * [antibody](https://getantibody.github.io/) for managing ZSH plugins
