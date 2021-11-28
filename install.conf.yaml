@@ -3,7 +3,7 @@
       relink: true
 
 - shell:
-    - [sudo chsh -s $(which zsh), Making zsh the default shell]
+    - [sudo chsh -s $(which zsh) $(whoami), Making zsh the default shell]
     - [curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin, Install antibody]
     - [sudo sh ./install_assh.sh, Install assh]
 
