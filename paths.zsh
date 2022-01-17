@@ -8,6 +8,11 @@ if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Go
+if [ -d "/usr/local/go/bin" ]; then
+    PATH="$PATH:/usr/local/go/bin"
+fi
+
 # NVM
 if [ -d "$HOME/.nvm" ]; then
     export NVM_DIR="$HOME/.nvm"
