@@ -1,5 +1,6 @@
 # Bootstrap
-DISABLE_MAGIC_FUNCTIONS=true #Fix slow paste
+DISABLE_MAGIC_FUNCTIONS=true # Fix slow paste
+DISABLE_AUTO_UPDATE=true # Disable OMZ updates
 
 # Load antibody
 source <(antibody init)
