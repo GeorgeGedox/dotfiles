@@ -13,6 +13,11 @@ if [ -d "/usr/local/go/bin" ]; then
     PATH="$PATH:/usr/local/go/bin"
 fi
 
+# Flyctl for fly.io
+if [ -d "$HOME/.fly/bin" ]; then
+    PATH="$HOME/.fly/bin:$PATH"
+fi
+
 # NVM
 if [ -d "$HOME/.nvm" ]; then
     export NVM_DIR="$HOME/.nvm"
