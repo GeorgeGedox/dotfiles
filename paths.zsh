@@ -13,11 +13,6 @@ if [ -d "/usr/local/go/bin" ]; then
     PATH="$PATH:/usr/local/go/bin"
 fi
 
-# Flyctl for fly.io
-if [ -d "$HOME/.fly/bin" ]; then
-    PATH="$HOME/.fly/bin:$PATH"
-fi
-
 # NVM
 if [ -d "$HOME/.nvm" ]; then
     export NVM_DIR="$HOME/.nvm"
@@ -26,6 +21,15 @@ if [ -d "$HOME/.nvm" ]; then
 fi
 
 # Homebrew
-if [ -d "/opt/homebrew/bin" ]; then
-    PATH="$PATH:/opt/homebrew/bin"
-fi
+case "$(uname -s)" in
+  Darwin)
+    if [ -d "/opt/homebrew/bin" ]; then
+      PATH="$PATH:/opt/homebrew/bin"
+    fi
+    ;;
+  Linux)
+    if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
+      PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+    fi
+    ;;
+esac
