@@ -17,3 +17,5 @@ source ~/.dotfiles/functions.zsh
 
 # Load aliases
 source ~/.dotfiles/aliases.zsh
+
+eval "$(direnv hook zsh)"
