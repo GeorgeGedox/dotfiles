@@ -1,17 +1,19 @@
 # Personal dotfiles
 
+## Requirements
+- Have ZSH installed and set as your default shell
+- Homebrew installed (**Only on mac**)
+- Have a [Nerd Font](https://www.nerdfonts.com/font-downloads) installed
+
 ## Quick install
-Just don't run the installer with sudo.
+Don't run the installer with sudo.
 ```
 git clone git@github.com:GeorgeGedox/dotfiles.git ~/.dotfiles
 chmod +x ~/.dotfiles/install
 cd ~/.dotfiles && ./install
 ```
 
-To share the zsh and vim configs with `root` just run `install_root` with `sudo`
-
 ## Components
 * [dotbot](https://github.com/anishathalye/dotbot) for easy boostrap of dotfiles
-* [antibody](https://getantibody.github.io/) for managing ZSH plugins
+* [antidote](https://getantidote.github.io/) for managing ZSH plugins
 * [powerlevel10k](https://github.com/romkatv/powerlevel10k/) ZSH theme
-* [assh](https://github.com/moul/assh) SSH config management

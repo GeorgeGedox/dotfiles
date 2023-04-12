@@ -1,16 +1,16 @@
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ]; then
-  PATH="$HOME/bin:$PATH"
+  export PATH="$HOME/bin:$PATH"
 fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ]; then
-  PATH="$HOME/.local/bin:$PATH"
+  export PATH="$HOME/.local/bin:$PATH"
 fi
 
 # Go
 if [ -d "/usr/local/go/bin" ]; then
-  PATH="$PATH:/usr/local/go/bin"
+  export PATH="$PATH:/usr/local/go/bin"
 fi
 
 # NVM
@@ -37,12 +37,12 @@ fi
 case "$(uname -s)" in
   Darwin)
     if [ -d "/opt/homebrew/bin" ]; then
-      PATH="$PATH:/opt/homebrew/bin"
+      export PATH="$PATH:/opt/homebrew/bin"
     fi
     ;;
   Linux)
     if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
-      PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+      export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
     fi
     ;;
 esac

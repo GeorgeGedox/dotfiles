@@ -2,16 +2,34 @@
     link:
       relink: true
 
-- shell:
-    - [sudo chsh -s $(which zsh) $(whoami), Making zsh the default shell]
-    - [curl -sfL git.io/antibody | sudo sh -s - -b /usr/local/bin, Install antibody]
-    - [sudo sh ./install_assh.sh, Install assh]
-
 - clean:
   - "~"
   - "~/.ssh"
 
+- shell:
+  - description: Installing submodules
+    command: git submodule update --init --recursive
+
+  - description: Install antidote to manage ZSH plugins
+    command: >
+      if [ ! -d ${ZDOTDIR:-~}/.antidote ]; then
+      git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote;
+      fi
+    stdin: true
+    stdout: true
+    stderr: true
+
+  - description: Install packages via Homebrew
+    command: >
+      if [ "command -v brew" ]; then
+      brew install exa bat;
+      fi
+    stdout: true
+    stdin: true
+    stderr: true
+
 - link:
-    ~/.zshrc: .zshrc
-    ~/.vimrc: .vimrc
-    ~/.ssh/assh.yml: assh.yml
+    ~/.zshrc: ./files/.zshrc
+    ~/.vimrc: ./files/.vimrc
+    ~/.ssh/assh.yml: ./files/assh.yml
+    ~/.zsh_plugins.txt: ./files/zsh_plugins.txt
