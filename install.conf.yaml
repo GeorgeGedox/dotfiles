@@ -28,6 +28,19 @@
     stdin: true
     stderr: true
 
+  - description: Install fzf
+    command: >
+      if [ ! -d ~/.fzf ]; then
+      git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf &&
+      ~/.fzf/install;
+      fi
+
+  - description: Install enhancd
+    command: >
+      if [ ! -d ~/.dotfiles/.enhancd ]; then
+      git clone --depth 1 https://github.com/b4b4r07/enhancd ~/.dotfiles/.enhancd;
+      fi
+
 - link:
     ~/.zshrc: ./files/.zshrc
     ~/.vimrc: ./files/.vimrc
