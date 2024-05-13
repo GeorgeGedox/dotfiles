@@ -1,0 +1,19 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+
+set -euo pipefail
+
+# Reset
+NC='\033[0m'
+# Colors
+Red='\033[0;31m'
+Green='\033[0;32m'
+
+{{ if eq .osid "linux-debian" "linux-ubuntu" -}}
+echo "=#= [Debian/Ubuntu] Installing specific packages"
+{{ range .packages.linux.debian -}}
+sudo apt install -y {{ . | quote }}
+{{ end -}}
+{{ end -}}
+
+{{ end -}}

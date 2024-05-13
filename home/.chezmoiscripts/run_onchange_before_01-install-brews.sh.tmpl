@@ -40,7 +40,7 @@ cask {{ . | quote }}
 EOF
 {{ end -}}
 
-{{ if eq .osid "linux-debian" "linux-ubuntu" -}}
+{{ if eq .chezmoi.os "linux" -}}
 echo "=#= Installing Linux specific brews"
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range .packages.linux.brews -}}

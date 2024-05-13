@@ -4,6 +4,9 @@ source ~/.dotfiles/paths.zsh
 # Load antidote
 source ~/.dotfiles/antidote.zsh
 
+# Load antidote
+source ~/.dotfiles/zoxide.zsh
+
 # Load functions
 source ~/.dotfiles/functions.zsh
 
