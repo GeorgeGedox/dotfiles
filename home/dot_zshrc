@@ -1,0 +1,17 @@
+# Load paths
+source ~/.dotfiles/paths.zsh
+
+# Load antidote
+source ~/.dotfiles/antidote.zsh
+
+# Load functions
+source ~/.dotfiles/functions.zsh
+
+# Load aliases
+source ~/.dotfiles/aliases.zsh
+
+# Load env config overwrites
+source ~/.dotfiles/configs.zsh
+
+# Load Starship
+eval "$(starship init zsh)"

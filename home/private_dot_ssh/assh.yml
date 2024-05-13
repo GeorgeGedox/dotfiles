@@ -1,0 +1,11 @@
+defaults:
+  ControlMaster: auto
+  ControlPersist: yes
+  ServerAliveInterval: 15
+  ServerAliveCountMax: 3
+  Compression: yes
+  IdentitiesOnly: yes
+  UseRoaming: no
+
+includes:
+  - ~/.ssh/personal.yml

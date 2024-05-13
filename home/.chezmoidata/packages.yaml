@@ -1,0 +1,11 @@
+---
+packages:
+  darwin:
+    brews:
+      - eza
+      - age
+      - fzf
+      - sops
+    casks: []
+  debian:
+    brews: []

@@ -1,0 +1,13 @@
+ohmyzsh/ohmyzsh
+
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/pip
+ohmyzsh/ohmyzsh path:plugins/aliases
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+
+zdharma-continuum/fast-syntax-highlighting
+zsh-users/zsh-autosuggestions
+
+ptavares/zsh-direnv
+ahmubashshir/zinsults
+ael-code/zsh-colored-man-pages

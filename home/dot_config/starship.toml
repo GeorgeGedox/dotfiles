@@ -1,0 +1,192 @@
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+$direnv\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$kubernetes\
+$package\
+$nodejs\
+$php\
+$python\
+$golang\
+$time\
+$cmd_duration
+$character
+"""
+
+add_newline = true
+
+[character]
+format = "└$symbol"
+success_symbol = ""
+error_symbol = "┤[failed](bold red)├"
+
+[os]
+format = "┌ [$symbol](white)"
+disabled = false
+
+[os.symbols]
+Arch = " "
+Debian = " "
+Fedora = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mint = " "
+NixOS = " "
+openSUSE = " "
+Raspbian = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+[username]
+show_always = true
+style_user = "yellow bold"
+style_root = "red bold"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+format = "[//](black bold)[$hostname](bold blue)"
+disabled = false
+
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = ""
+read_only_style = "red bold"
+format = " in [$read_only]($read_only_style)[$path]($style) "
+
+[direnv]
+disabled = false
+format = "with [$symbol$allowed]($style) "
+symbol = "󰞷 "
+style = "bold green"
+
+[git_metrics]
+disabled = false
+
+[git_branch]
+symbol = " "
+
+[time]
+disabled = false
+style = "bold black"
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[crystal]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fennel]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[package]
+symbol = "󰏗 "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[pijul_channel]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
+
+[swift]
+symbol = " "
+
+[zig]
+symbol = " "
