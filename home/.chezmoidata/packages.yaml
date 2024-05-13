@@ -1,11 +1,21 @@
 ---
 packages:
+  common_brews:
+    - antidote
+    - eza
+    - age
+    - fzf
+    - sops
+    - starship
+    - bat
+    - direnv
+    - jq
+    - yq
   darwin:
-    brews:
-      - eza
-      - age
-      - fzf
-      - sops
-    casks: []
-  debian:
     brews: []
+    casks: []
+  linux:
+    brews:
+      - flux
+      - kubernetes-cli
+      - dust
