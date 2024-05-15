@@ -1,0 +1,30 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+
+set -euo pipefail
+
+# Reset
+NC='\033[0m'
+# Colors
+Red='\033[0;31m'
+Green='\033[0;32m'
+
+# Get current default shell for user
+_CURRENT_SHELL=$(getent passwd $USER | awk -F: '{print $NF}')
+
+if [[ $_CURRENT_SHELL == *"/zsh" ]]; then
+    echo -e "${Green}Default shell is ZSH! Skipping to next script..${NC}"
+    exit 0
+fi
+
+echo -e "${Red}Default shell is not ZSH! Will try to install it and switch to it..${NC}"
+
+{{ if eq .osid "linux-opensuse-tumbleweed" -}}
+echo "=#= [openSUSE Tumbleweed] Installing zsh.."
+sudo zypper in -y zsh
+{{ end -}}
+
+echo "=#= [Generic] Changing default shell to ZSH.."
+chsh -s $(which zsh)
+
+{{ end -}}

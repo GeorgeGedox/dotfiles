@@ -11,7 +11,7 @@ Green='\033[0;32m'
 
 echo "=#= Checking if Homebrew is installed.."
 if [ ! -x "$(command -v brew)" ]; then
-    echo -e "${Red}Homebrew does not appear to be installed. Run the following command to have it installed:${NC}"
+    echo -e "${Red}Homebrew does not appear to be installed or is not in \$PATH. Run the following command to have it installed:${NC}"
     echo '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
     exit 1
 fi
