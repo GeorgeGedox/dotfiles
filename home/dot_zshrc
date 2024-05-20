@@ -4,6 +4,9 @@ source ~/.dotfiles/configs.zsh
 # Load paths
 source ~/.dotfiles/paths.zsh
 
+# Load completions
+source ~/.dotfiles/completions.zsh
+
 # Load antidote
 source ~/.dotfiles/antidote.zsh
 
@@ -13,11 +16,21 @@ source ~/.dotfiles/functions.zsh
 # Load aliases
 source ~/.dotfiles/aliases.zsh
 
-# Load completions
-source ~/.dotfiles/completions.zsh
-
 # Set up fzf key bindings and fuzzy completion
 command -v fzf >/dev/null && . <(fzf --zsh)
 
 # Load Starship
 eval "$(starship init zsh)"
+
+# Start Zellij
+if [[ -z "$ZELLIJ" ]]; then
+    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+        zellij attach -c
+    else
+        zellij
+    fi
+
+    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+        exit
+    fi
+fi

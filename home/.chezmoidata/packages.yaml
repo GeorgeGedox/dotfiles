@@ -12,8 +12,10 @@ packages:
     - jq
     - yq
     - tlrc
+    - zellij
   darwin:
-    brews: []
+    brews:
+      - bash # Fuck you Apple for shipping bash from 2007 by default
     casks: []
   linux:
     brews:

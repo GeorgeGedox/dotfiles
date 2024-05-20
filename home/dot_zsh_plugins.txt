@@ -2,10 +2,10 @@ ohmyzsh/ohmyzsh path:plugins/command-not-found
 chrissicool/zsh-256color
 zdharma-continuum/fast-syntax-highlighting
 zsh-users/zsh-autosuggestions
-clarketm/zsh-completions
 ptavares/zsh-direnv
 ael-code/zsh-colored-man-pages
 babarot/enhancd
+clarketm/zsh-completions
 
 #Disabling for now as it leads to an error on init
 #ahmubashshir/zinsults
