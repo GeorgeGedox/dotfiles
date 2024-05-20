@@ -12,19 +12,18 @@ Green='\033[0;32m'
 # Get current default shell for user
 _CURRENT_SHELL=$(getent passwd $USER | awk -F: '{print $NF}')
 
+echo "=#= [Generic] Changing default shell to ZSH.."
+
 if [[ $_CURRENT_SHELL == *"/zsh" ]]; then
     echo -e "${Green}Default shell is ZSH! Skipping to next script..${NC}"
     exit 0
 fi
 
-echo -e "${Red}Default shell is not ZSH! Will try to install it and switch to it..${NC}"
+if [ ! -x "$(command -v zsh)" ]; then
+    echo -e "${Red}ZSH does not appear to be installed! Install it and try again.${NC}"
+    exit 1
+fi
 
-{{ if eq .osid "linux-opensuse-tumbleweed" -}}
-echo "=#= [openSUSE Tumbleweed] Installing zsh.."
-sudo zypper in -y zsh
-{{ end -}}
-
-echo "=#= [Generic] Changing default shell to ZSH.."
 chsh -s $(which zsh)
 
 {{ end -}}

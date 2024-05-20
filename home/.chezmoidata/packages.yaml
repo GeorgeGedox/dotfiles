@@ -12,7 +12,6 @@ packages:
     - jq
     - yq
     - tlrc
-    - zoxide
   darwin:
     brews: []
     casks: []

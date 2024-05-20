@@ -1,11 +1,11 @@
+# Basic configs
+source ~/.dotfiles/configs.zsh
+
 # Load paths
 source ~/.dotfiles/paths.zsh
 
 # Load antidote
 source ~/.dotfiles/antidote.zsh
-
-# Load antidote
-source ~/.dotfiles/zoxide.zsh
 
 # Load functions
 source ~/.dotfiles/functions.zsh
@@ -13,8 +13,11 @@ source ~/.dotfiles/functions.zsh
 # Load aliases
 source ~/.dotfiles/aliases.zsh
 
-# Load env config overwrites
-source ~/.dotfiles/configs.zsh
+# Load completions
+source ~/.dotfiles/completions.zsh
+
+# Set up fzf key bindings and fuzzy completion
+command -v fzf >/dev/null && . <(fzf --zsh)
 
 # Load Starship
 eval "$(starship init zsh)"

@@ -1,13 +1,11 @@
-ohmyzsh/ohmyzsh
-
-ohmyzsh/ohmyzsh path:plugins/git
-ohmyzsh/ohmyzsh path:plugins/pip
-ohmyzsh/ohmyzsh path:plugins/aliases
 ohmyzsh/ohmyzsh path:plugins/command-not-found
-
+chrissicool/zsh-256color
 zdharma-continuum/fast-syntax-highlighting
 zsh-users/zsh-autosuggestions
-
+clarketm/zsh-completions
 ptavares/zsh-direnv
-ahmubashshir/zinsults
 ael-code/zsh-colored-man-pages
+babarot/enhancd
+
+#Disabling for now as it leads to an error on init
+#ahmubashshir/zinsults
