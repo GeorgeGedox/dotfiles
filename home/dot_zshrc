@@ -23,14 +23,7 @@ command -v fzf >/dev/null && . <(fzf --zsh)
 eval "$(starship init zsh)"
 
 # Start Zellij
-if [[ -z "$ZELLIJ" ]]; then
-    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        zellij attach -c
-    else
-        zellij
-    fi
-
-    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-        exit
-    fi
+if [[ -z "$ZELLIJ" ]] && [[ ! "$VSCODE_INJECTION" ]]; then
+    zellij attach -c main
+    exit
 fi

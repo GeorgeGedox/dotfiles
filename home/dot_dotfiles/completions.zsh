@@ -6,6 +6,7 @@ fi
 
 # Other completions
 command -v flux >/dev/null && . <(flux completion zsh)
+command -v chezmoi >/dev/null && . <(chezmoi completion zsh)
 
 # Initialize completions
 autoload -Uz compinit; compinit
