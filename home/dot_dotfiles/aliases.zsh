@@ -25,3 +25,8 @@ if [ -x "$(command -v fzf)" ] && [ -x "$(command -v git)" ]; then
   alias gcb='git branch | fzf --header "Checkout branch" --preview "git show --color=always {-1}" | xargs git checkout'
   alias glog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 fi
+
+# Zellij
+if [ -x "$(command -v zellij)" ]; then
+  alias z="zellij"
+fi

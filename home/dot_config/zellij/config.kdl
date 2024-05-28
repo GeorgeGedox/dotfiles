@@ -200,7 +200,7 @@ plugins {
 }
 
 serialization_interval 10
-serialize_pane_viewport true
+serialize_pane_viewport false
 scrollback_lines_to_serialize 10000
 
 // Define color themes for Zellij
@@ -231,7 +231,7 @@ scrollback_lines_to_serialize 10000
 // The name of the default layout to load on startup
 // Default: "default"
 //
-// default_layout "main"
+default_layout "main"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal

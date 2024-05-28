@@ -1,6 +1,7 @@
 # Basic setup
 export EDITOR="vim"
 export VISUAL="vim"
+export LANG=en_US.UTF-8
 
 # History config
 setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.

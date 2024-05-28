@@ -25,5 +25,5 @@ eval "$(starship init zsh)"
 # Start Zellij
 if [[ -z "$ZELLIJ" ]] && [[ ! "$VSCODE_INJECTION" ]]; then
     zellij attach -c main
-    exit
+    # exit
 fi
