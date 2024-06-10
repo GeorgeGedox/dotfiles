@@ -21,9 +21,3 @@ command -v fzf >/dev/null && . <(fzf --zsh)
 
 # Load Starship
 eval "$(starship init zsh)"
-
-# Start Zellij
-if [[ -z "$ZELLIJ" ]] && [[ ! "$VSCODE_INJECTION" ]]; then
-    zellij attach -c main
-    # exit
-fi

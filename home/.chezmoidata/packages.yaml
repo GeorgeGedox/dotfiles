@@ -12,7 +12,6 @@ packages:
     - jq
     - yq
     - tlrc
-    - zellij
   darwin:
     brews:
       - bash # Fuck you Apple for shipping bash from 2007 by default
