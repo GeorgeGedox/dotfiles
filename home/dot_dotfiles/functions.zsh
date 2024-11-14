@@ -19,3 +19,8 @@ extract() {
          echo "'$1' is not a valid file"
      fi
 }
+
+gwip() {
+  git add .
+  git commit -s -m "Work in progress.."
+}
