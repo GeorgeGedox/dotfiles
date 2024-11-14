@@ -20,6 +20,7 @@ extract() {
      fi
 }
 
+# Git WIP quick commit
 gwip() {
   git add .
   git commit -s -m "Work in progress.."

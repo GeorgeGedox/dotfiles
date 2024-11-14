@@ -6,6 +6,7 @@ ptavares/zsh-direnv
 ael-code/zsh-colored-man-pages
 babarot/enhancd
 clarketm/zsh-completions
+so-fancy/diff-so-fancy
 
 #Disabling for now as it leads to an error on init
 #ahmubashshir/zinsults
