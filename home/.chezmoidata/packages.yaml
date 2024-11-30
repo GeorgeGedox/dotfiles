@@ -12,6 +12,7 @@ packages:
     - jq
     - yq
     - tlrc
+    - aria2
   darwin:
     brews:
       - bash # Fuck you Apple for shipping bash from 2007 by default

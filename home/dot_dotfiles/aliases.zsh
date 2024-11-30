@@ -1,6 +1,7 @@
 # General use
 alias path='echo -e ${PATH//:/\\n}' # Formatted path
 alias reload=". ~/.zshrc" # Reload shell
+alias dln="aria2c -x 16 -s16 --" # Aria2 download
 
 # Replace ssh
 if [ -x "$(command -v assh)" ]; then
