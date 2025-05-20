@@ -33,20 +33,20 @@ case "$(uname -s)" in
     ;;
 esac
 
-## Pyenv
+# Pyenv
 if [ -d "$HOME/.pyenv" ]; then
   export PYENV_ROOT="$HOME/.pyenv"
   command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
 
-## Jenv
+# Jenv
 if [ -d "$HOME/.jenv" ]; then
   export PATH="$HOME/.jenv/bin:$PATH"
   eval "$(jenv init -)"
 fi
 
-## Jenv
+# PHP
 if [ -d "$HOME/.config/herd-lite" ]; then
   export PATH="$HOME/.config/herd-lite/bin:$PATH"
   export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
