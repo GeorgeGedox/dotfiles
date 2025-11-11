@@ -4,6 +4,7 @@ $username\
 $hostname\
 $directory\
 $direnv\
+$mise\
 $git_branch\
 $git_metrics\
 $kubernetes\
@@ -68,6 +69,14 @@ style = "bold green"
 
 [git_metrics]
 disabled = false
+
+[mise]
+disabled = false
+format = "with [$symbol$health]($style) "
+healthy_symbol = " "
+unhealthy_symbol = " "
+style = "bold yellow"
+symbol = " mise "
 
 [git_branch]
 symbol = " "

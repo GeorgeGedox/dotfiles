@@ -24,3 +24,8 @@ command -v fzf >/dev/null && . <(fzf --zsh)
 
 # Load Starship
 eval "$(starship init zsh)"
+
+# Activate Mise-en-place
+if [ -f "$HOME/.local/bin/mise" ]; then
+  eval "$(mise activate zsh)"
+fi
