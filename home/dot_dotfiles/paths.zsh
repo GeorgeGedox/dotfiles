@@ -51,3 +51,8 @@ if [ -d "$HOME/.config/herd-lite" ]; then
   export PATH="$HOME/.config/herd-lite/bin:$PATH"
   export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 fi
+
+# Mise-en-place
+if [ -d "$HOME/.local/bin/mise" ]; then
+  eval "$(mise activate zsh)"
+fi
