@@ -22,7 +22,7 @@ echo -e "${Green}Homebrew appears to be installed!${NC}"
 export HOMEBREW_NO_ENV_HINTS=1
 
 echo "=#= Installing Common brews"
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.common_brews -}}
 brew {{ . | quote }}
 {{ end -}}
@@ -30,7 +30,7 @@ EOF
 
 {{ if eq .osid "darwin" -}}
 echo "=#= [Darwin] Installing Mac specific brews"
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.darwin.brews -}}
 brew {{ . | quote }}
 {{ end -}}
@@ -42,7 +42,7 @@ EOF
 
 {{ if eq .chezmoi.os "linux" -}}
 echo "=#= [Linux Generic] Installing Linux specific brews"
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.linux.brews -}}
 brew {{ . | quote }}
 {{ end -}}
