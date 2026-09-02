@@ -177,6 +177,9 @@ symbol = " "
 
 [python]
 symbol = " "
+pyenv_version_name = true
+detect_extensions = []
+detect_files = [ '.python-version', 'pyproject.toml', 'requirements.txt', 'tox.ini' ]
 
 [rlang]
 symbol = "󰟔 "
